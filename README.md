@@ -40,4 +40,4 @@ It provides powerful data insights through dynamic filtering, SQL-like queries, 
 ---
 
 ## 📂 Folder Structure
-
+STRUCTURELABSPROJECT/ ├── hello.py # Main app script ├── preswald.toml # App config file ├── pyproject.toml ├── secrets.toml ├── data/ │ └── BlackFriday.csv ├── images/ │ ├── 
