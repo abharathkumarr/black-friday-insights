@@ -1,0 +1,22 @@
+[project]
+title = "Black Friday Insights"
+version = "1.0"
+port = 8501
+slug = "preswald-project"  
+entrypoint = "hello.py"
+
+[branding]
+name = "Sales Analyzer Pro"
+logo = "images/sidebar.png"  
+favicon = "images/analytics.png"  
+primary_color = "#e67e22"  
+sidebar_color = "#2c3e50"  
+[data.black_friday]
+type = "csv"
+path = "data/BlackFriday.csv"
+
+
+
+[logging]
+level = "INFO"  
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
