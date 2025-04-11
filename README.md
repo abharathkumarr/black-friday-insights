@@ -40,4 +40,38 @@ It provides powerful data insights through dynamic filtering, SQL-like queries, 
 ---
 
 ## 📂 Folder Structure
-STRUCTURELABSPROJECT/ ├── hello.py # Main app script ├── preswald.toml # App config file ├── pyproject.toml ├── secrets.toml ├── data/ │ └── BlackFriday.csv ├── images/ │ ├── 
+STRUCTURELABSPROJECT/ 
+├── .venv/ 
+├── data/ 
+  │ └── BlackFriday.csv 
+├── images/ 
+  │ ├── analytics.png 
+  │ ├── favicon.ico 
+  │ ├── logo.png 
+  │ └── sidebar.png 
+├── .gitignore 
+├── hello.py 
+├── preswald.toml 
+├── pyproject.toml 
+└── secrets.toml
+
+
+- **.venv/**: (Optional) Python virtual environment folder.  
+- **data/**: Contains the `BlackFriday.csv` dataset.  
+- **images/**: Contains image files used in the dashboard (favicon, logos, etc.).  
+- **.gitignore**: Lists files/folders that Git should ignore (e.g., `.venv`, secret keys).  
+- **hello.py**: Main Preswald app script containing the dashboard code.  
+- **preswald.toml**: Configuration file for Preswald (datasource settings, environment info).  
+- **pyproject.toml**: Python project configuration (dependencies, packaging).  
+- **secrets.toml**: Secure file to store private keys or credentials (excluded from Git).
+
+---
+
+## 🏗️ Installation & Setup
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/your-username/sales-analyzer-pro.git
+   cd sales-analyzer-pro
+python3 -m venv .venv
+source .venv/bin/activate
