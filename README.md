@@ -40,6 +40,7 @@ It provides powerful data insights through dynamic filtering, SQL-like queries, 
 ---
 
 ## 📂 Folder Structure
+```
 STRUCTURELABSPROJECT/ 
 ├── .venv/ 
 ├── data/ 
