@@ -5,13 +5,13 @@ import plotly.express as px
 connect()
 
 sb = sidebar(defaultopen=True)
-sb["title"] = text("🛍️ **Sales Analyzer Pro**")
+sb["title"] = text("**Sales Analyzer Pro**")
 sb["desc"] = text("Explore Black Friday trends using filters and visual insights.")
 
 # Load data with validation
 try:
     df = get_df("black_friday")
-    text(f"✅ Successfully loaded {len(df)} rows")
+    text(f" Successfully loaded {len(df)} rows")
     text("**First 20 rows**")
     
     # Debug: Show first 20 rows to confirm load
@@ -21,7 +21,7 @@ try:
 
 except Exception as e:
     text(f"""
-    ❌ Critical Error Loading Data: {str(e)}
+     Critical Error Loading Data: {str(e)}
     **Verify:**
     1. File exists in `data/` folder  
     2. Filename matches `preswald.toml`  
@@ -35,13 +35,13 @@ if 'df' in locals():
     text("## Data Cleaning Steps")
     df_clean = df.drop(columns=['Product_Category_2', 'Product_Category_3'])
     df_clean = df_clean.dropna(subset=['Purchase'])
-    text("✅ Dropped unused columns (`Product_Category_2`, `Product_Category_3`) and removed rows with missing purchase values.")
-    text(f"📊 Final dataset has {len(df_clean.columns)} columns and {len(df_clean)} rows.")
+    text("Dropped unused columns (`Product_Category_2`, `Product_Category_3`) and removed rows with missing purchase values.")
+    text(f"Final dataset has {len(df_clean.columns)} columns and {len(df_clean)} rows.")
     
     # SQL Analysis Section
     text("## SQL Analysis")
 
-    text("🔍 Displaying the top 20 transactions where the purchase amount exceeds 10,000.")
+    text("Displaying the top 20 transactions where the purchase amount exceeds 10,000.")
     sql_filter = """
         SELECT User_ID, Gender, Age, City_Category, Purchase 
         FROM black_friday 
@@ -51,7 +51,7 @@ if 'df' in locals():
     basic_query = query(sql_filter, "black_friday")
     table(basic_query, title="Basic SQL Query Results")
 
-    text("📊 Average spending grouped by age and gender segments.")
+    text("Average spending grouped by age and gender segments.")
     sql_aggregate = """
         SELECT Age, Gender, AVG(Purchase) as Avg_Spending
         FROM black_friday 
@@ -106,4 +106,4 @@ if 'df' in locals():
     plotly(fig3)
 
 else:
-    text("🛑 Cannot proceed - fix data loading first.")
+    text("Cannot proceed - fix data loading first.")
